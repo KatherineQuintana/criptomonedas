@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Cripto logo" src="../assets/criptos.png">
-    <wellcome msg="Bienvenido a ver las estadisticas de las criptomonedas"/>
+    <wellcome msg="Bienvenidos a ver los tipos y estadisticas de las criptomonedas"/>
   </div>
 </template>
 
