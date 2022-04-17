@@ -16,7 +16,3 @@ export default {
     props: ['cripto']
 }
 </script>
-
-<style>
-
-</style>

@@ -13,8 +13,10 @@
 import {useStore} from 'vuex'
 import {computed, onMounted} from 'vue' 
 import Card from './Card.vue'
+
 export default {
   components: { Card },
+  
   setup(){
       const store = useStore()
 
