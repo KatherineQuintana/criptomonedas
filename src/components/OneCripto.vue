@@ -13,6 +13,7 @@ import {useRoute} from 'vue-router' */
 import {useStore} from 'vuex'
 import {computed, onMounted} from 'vue' 
 
+//data de estadísticas
 export default {
     props:['id'],
     setup(props){

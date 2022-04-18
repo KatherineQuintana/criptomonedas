@@ -14,6 +14,7 @@ import {useStore} from 'vuex'
 import {computed, onMounted} from 'vue' 
 import Card from './Card.vue'
 
+//Data de listado de criptomonedas
 export default {
   components: { Card },
   
