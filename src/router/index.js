@@ -13,7 +13,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/TypeCripto.vue')
   },
   {
-    path: '/element/:name',
+    path: '/element/:id',
     name: 'element',
     props: true,
     component: () => import(/* webpackChunkName: "about" */ '../components/OneCripto.vue')

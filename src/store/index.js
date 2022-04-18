@@ -6,11 +6,7 @@ export default createStore({
     estadisCriptos: [],
   },
   getters: {
-/*     rankCripto(state){
-      return state.cripto.sort((a,b) =>
-        a.rank < b.rank ? 1 : -1
-      )
-    } */
+
   },
   mutations: {
     setCripto(state, payload) {

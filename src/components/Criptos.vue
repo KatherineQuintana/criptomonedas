@@ -2,7 +2,7 @@
   <div class="row">
       <div 
       class="col-12"
-      v-for="cripto in cripto" :key="cripto.name"
+      v-for="cripto in cripto" :key="cripto.id"
       >
       <Card :cripto="cripto"/>
       </div>

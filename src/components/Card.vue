@@ -1,12 +1,12 @@
 <template>
   <div class="card">
       <div class="card-body">
-          <router-link :to="`/element/${cripto.name}`" class="text-success">{{cripto.name}}</router-link>
-          <h5 class="card-text">
-              <span class="badge bg-secondary mb-1">Rankin: {{cripto.rank}}</span>
-              <span class="badge bg-dark d-block mb-1">Simbolo: {{cripto.symbol}}</span>
+          <h1><router-link :to="`/element/${cripto.id}`" class="badge bg-secondary mb-1">{{cripto.name}}</router-link></h1>
+          <h3 class="card-text">
+              <span class="badge bg-light text-dark mb-1">Rankin: {{cripto.rank}}</span>
+              <span class="badge bg-light text-dark mb-1">Simbolo: {{cripto.symbol}}</span>
               <span class="badge bg-light text-dark mb-1">Tipo: {{cripto.type}}</span>
-          </h5>
+          </h3>
       </div>
   </div>
 </template>
