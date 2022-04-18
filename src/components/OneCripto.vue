@@ -1,15 +1,33 @@
 <template>
 <div>
-  <div v-for="(estadisCriptos, index) in estadisCriptos" :key="index">
   <h1>Estadisticas de {{id}}</h1>
-  <span class="badge bg-light text-dark mb-1">prueba: {{estadisCriptos.time_open}}</span>
+  <div v-for="(estadisCriptos, index) in estadisCriptos" :key="index">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Apertura</th>
+      <th scope="col">Alto</th>
+      <th scope="col">Bajo</th>
+      <th scope="col">Cierre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{estadisCriptos.time_close}}</th>
+      <td>${{estadisCriptos.open}}</td>
+      <td>${{estadisCriptos.high}}</td>
+      <td>${{estadisCriptos.low}}</td>
+      <td>${{estadisCriptos.close}}</td>
+    </tr>
+  </tbody>
+</table>
  </div>
 </div>
 </template>
 
 <script>
-/* import { onMounted, ref } from '@vue/runtime-core'
-import {useRoute} from 'vue-router' */
+
 import {useStore} from 'vuex'
 import {computed, onMounted} from 'vue' 
 
@@ -21,7 +39,7 @@ export default {
       const store = useStore()
 
       const estadisCriptos = computed(()=> {
-          return store.state.estadisCriptos
+          return store.getters.orderDate
       })
 
       onMounted(()=>{

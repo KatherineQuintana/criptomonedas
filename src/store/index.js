@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import {useRoute} from 'vue-router'
-const nameParams = useRoute()
+
 
 export default createStore({
   state: {
@@ -8,6 +8,9 @@ export default createStore({
     estadisCriptos: [],
   },
   getters: {
+    orderDate(state) {
+      return state.estadisCriptos.sort((a, b) => a.time_close < b.time_close ? 1 : -1)
+    }
 
   },
   mutations: {
@@ -31,6 +34,7 @@ export default createStore({
 
     async getCriptoEstadi ({commit}) {
       try{
+        const nameParams = useRoute()
         const res = await fetch (`https://api.coinpaprika.com/v1/coins/${nameParams.params.id}/ohlcv/historical?start=2022-04-11&end=2022-04-17`)
         const data = await res.json()
         commit('setEstadisCriptos', data)
