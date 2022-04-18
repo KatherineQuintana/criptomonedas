@@ -6,7 +6,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import Wellcome from '../components/Wellcome.vue'
 
 export default {
